@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0; 
+    list-style-type: none;
+    /* el padding y border se consideran para calcular
+     el tamaño de la caja */
+    box-sizing: border-box;
+    /* se elimina el subrayado de los links <a> */
+    text-decoration: none
+}
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap');
+
+.shadow {
+    background-color: black;
+}
+
+header {
+    border-radius: 5px;
+    height: 6vh;
+    padding: 1vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%; 
+}
+
+header img {
+    width: 40px;
+    max-width: 80%;
+}
+
+.interactable {
+    cursor: pointer;
+    transition: all ease-out 250ms;
+}
+
+header:hover {
+    height: 9vh;
+}
+.interactable:hover{
+    padding: 2vh;
+}
+
+.active {
+    position: relative;
+    justify-content: center;
+}
+
+.active:hover::after{
+    content: ".";
+    color: red;
+    font-size: 40px;
+    position: absolute;
+    bottom: -2vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.welcome {
+    height: 100vh;
+    width: 100%;
+    padding: 10%;
+    background-color: #2c5e5f;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome .portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.welcome .portrait img {
+    max-width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.welcome h1 {
+    color: white;
+    text-align: center;
+    padding: 1%;
+    font-family: 'Alkatra', cursive;
+    max-width: 100%;
+}
+
+p {
+    color: white;
+    text-align: center;
+    padding: 1%;
+    font-family: 'Alkatra', cursive;
+    max-width: 100%;
+}
+
+.courses {
+    height: 94vh;
+    max-width: 100%;
+    background-color: #3a7b7c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 10%;
+    text-align: center;
+}
+
+.courses > article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    max-width: 70%;
+    
+}
+
+.courses img {
+    max-width: 33%;
+    border-radius: 10px;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    padding: 1%;
+    font-family: 'Alkatra', cursive;
+    max-width: 100%;
+}
+
+.contact {
+    height: 100vh;
+    width: 100%;
+    background-color: #356f70;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
+    text-align: center;
+}
+
+.contact  > article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    max-width: 70%;
+}
+
+@media screen and (min-width: 700px) {
+    body {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+    justify-content: center;
+    margin: 0 auto;
+    }
+}
+
+    article {
+        grid-column: span 1;
+        grid-row: 2;
+    }
+
+    .courses{
+        height: 100vh;
+    }
+    
+    .contact img {
+        max-width: 70%;
+    }

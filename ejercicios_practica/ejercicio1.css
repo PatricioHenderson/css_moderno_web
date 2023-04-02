@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0; 
+    list-style-type: none;
+    /* el padding y border se consideran para calcular
+     el tamaño de la caja */
+    box-sizing: border-box;
+    /* se elimina el subrayado de los links <a> */
+    text-decoration: none
+  }
+
+.shadow {
+    background-color: black;
+}
+header {
+    border-radius: 5px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.interactable {
+    cursor: pointer;
+    transition: all ease-out 250ms;
+}
+
+.interactable:hover {
+    padding: 30px;
+    
+}
+.active {
+    position: relative;
+    justify-content: center;
+}
+.active:hover::after {
+    content: ".";
+    color:red;
+    font-size: 40px;
+    position:absolute;
+    bottom: -2vh;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+body {
+    background-color: lightgray;
+}
